@@ -1,0 +1,3 @@
+= BucketList
+
+This project rocks and uses MIT-LICENSE. It's a mountable rails engine that allows for todo lists to be created.
