@@ -1,0 +1,9 @@
+<h1>Persons#index</h1>
+<ul>
+<% @persons.each do |person| %>
+	<li>
+		<%= link_to person.name, person_path(person) %> <%= link_to "Edit", edit_person_path(person) %> <%= link_to "Delete", person_path(person), :method => :delete %>
+		<%= ownable_list_list(person) %>
+	</li>
+<% end %>
+</ul>

@@ -1,0 +1,13 @@
+<ul>
+
+<% ownable.lists.each do |list| %>
+	<% debugger %>
+	<li><%= link_to list.name,  bucket_list.list_path(ownable.id, list) %>
+		<ul>
+		<% list.items.each do |item| %>
+			<li><%= item.name %></li>
+		<% end %>
+		</ul>
+	</li>
+<% end %>
+</ul>

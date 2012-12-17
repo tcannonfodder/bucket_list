@@ -1,0 +1,11 @@
+<%= form_for list do |f| %>
+	<%= f.label :name %> <%= f.text_field :name %> <br/>
+	<h1>Items</h1>
+	<%= f.fields_for :items do |fields_builder|%>
+		<%= fields_builder.check_box :completed %>
+		<%= fields_builder.label :completed %>
+		<%= fields_builder.label :name %>
+		<%= fields_builder.text_field :name %><br/>
+	<% end %>
+	 <%= f.submit %>
+<% end %>
