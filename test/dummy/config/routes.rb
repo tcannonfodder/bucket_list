@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   	mount BucketList::Engine => "/" #the goal is to access our lists like: person/:person_id/lists
 
   end
+  
   #I don't want the route to be mounted at the top level, lists are owned by people
   #mount BucketList::Engine => "/bucket_list"
 

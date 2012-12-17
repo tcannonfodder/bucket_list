@@ -6,10 +6,6 @@ module BucketList
     	ActiveRecord::Base.extend BucketList::HasLists
 	end
 
-	initializer 'bucket_list.ar_includes', :before=>"action_controller.deprecated_routes" do |app|
-    	ActiveRecord::Base.send(:include, BucketList::HasLists)
-	end
-
     config.to_prepare do
     	ActionView::Base.send(:include, BucketListHelper)
     end
